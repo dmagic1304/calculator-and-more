@@ -8,8 +8,12 @@ function determineCharacter (e) {
   if (planet === 1) {
     result = "Earth super strength"
   } else if (planet === 2) {
-    result = "flying"
-  } 
+    result = "Mars: you're flying"
+  } else if (planet === 3) {
+    result = "Venus: you can grow foliage"
+  } else if (planet === 4) {
+    result = "Pluto: you command asteroid belts"
+  }
 
  const name = document.getElementById("name").value;
 //  name;
