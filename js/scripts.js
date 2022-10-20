@@ -1,6 +1,7 @@
 // Bussines logic
 
-function determineCharacter () {
+function determineCharacter (e) {
+  event.preventDefault();
   let planet = parseInt(document.querySelector("select#planet").value);
 
   let result;
@@ -9,7 +10,16 @@ function determineCharacter () {
   } else if (planet === 2) {
     result = "flying"
   } 
+
+ const name = document.getElementById("name").value;
+//  name;
+  console.log("name & planet: ", name, planet);
 }
 
 
 // UI logic
+
+window.addEventListener("load", function(){
+    const form = document.querySelector("form");
+    form.addEventListener("submit", determineCharacter);
+});
