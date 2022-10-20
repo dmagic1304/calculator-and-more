@@ -18,7 +18,7 @@ function determineCharacter (e) {
     result = "Pluto: you command asteroid belts"
   }
 
-  document.querySelector('p').innerText = result;
+  document.querySelector('p').innerText = "Your Hero " + name + " comes from the planet " + result + "! In addition to that, your hero can lift " + radioEvent + " tons";
   document.querySelector('p').removeAttribute("class")
   
 
