@@ -1,10 +1,11 @@
-// Bussines logic
+// Business logic
 
 function determineCharacter (e) {
   event.preventDefault();
-   const name = document.getElementById("name").value;
-   let planet = parseInt(document.querySelector("select#planet").value);
-   const radioEvent = document.querySelector("input[name='radio']:checked").value;
+  const name = document.getElementById("name").value;
+  let planet = parseInt(document.querySelector("select#planet").value);
+  const radioEvent = document.querySelector("input[name='radio']:checked").value;
+  // let charInfo = document.querySelector('p');
 
   let result;
   if (planet === 1) {
@@ -17,6 +18,9 @@ function determineCharacter (e) {
     result = "Pluto: you command asteroid belts"
   }
 
+  document.querySelector('p').innerText = result;
+  document.querySelector('p').removeAttribute("class")
+  
 
   console.log("name, planet, radioEvent: ", name, planet, radioEvent);
 }
