@@ -2,7 +2,9 @@
 
 function determineCharacter (e) {
   event.preventDefault();
-  let planet = parseInt(document.querySelector("select#planet").value);
+   const name = document.getElementById("name").value;
+   let planet = parseInt(document.querySelector("select#planet").value);
+   const radioEvent = document.querySelector("input[name='radio']:checked").value;
 
   let result;
   if (planet === 1) {
@@ -15,9 +17,8 @@ function determineCharacter (e) {
     result = "Pluto: you command asteroid belts"
   }
 
- const name = document.getElementById("name").value;
-//  name;
-  console.log("name & planet: ", name, planet);
+
+  console.log("name, planet, radioEvent: ", name, planet, radioEvent);
 }
 
 
